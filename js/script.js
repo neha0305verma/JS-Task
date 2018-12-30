@@ -1,3 +1,7 @@
+//Version : 1.0.0
+//Author : Neha Verma
+//Details : Feth data from movie api
+
 getMovie();
 function getMovie() {
     $.ajax({
