@@ -1,0 +1,198 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="container" class="container">
+        <!------------header----------->
+        <div class="mynavbar">
+            <nav class="navbar navbar-expand-md navbar-blue navbar-fixed-top">
+
+                <a class="navbar-brand" href="#">Movie.com</a>
+
+                <button id="hamburger" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav pull-right">
+                        <li class="nav-item">
+                            <a class="active nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Movie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Aboutus</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </nav>
+        </div>
+        <!------------header----------->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Movie Details</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="modal-index"></div>
+                        <div id="modal-title"></div>
+                        <div id="modal-year"></div>
+                        <div id="modal-cast"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------Modal----------------------->
+    <div class="container main-body row">
+        <!--------------Body----------->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <!------------profile----------->
+                    <div class="container sidebar">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="well sidebar-body col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                                <img src="img/profile.png" alt="" class="img-circle" id="user-img">
+                                                <h4><a class="text-center"><strong>Link1</strong></a></h4>
+                                                <h4><a class="text-center"><small>Link2</small></a></h4>
+                                                <h4><a class="text-center"><small>Link3</small></a></h4>
+                                                <h4><a class="text-center"><small>Link4</small></a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!------------profile----------->
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <div class="movie-container">
+                        <!------------dashboard----------->
+
+                        <!------------dashboard----------->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------Body----------->
+    </div>
+
+    <!------------ Footer ------------>
+    <footer class="page-footer footer-color-dark">
+        <!-----------footer social---------->
+        <div class="footer-social">
+            <div class="container">
+                <div class="row py-4 d-flex align-items-center">
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0">Get connected with us on social networks!</h6>
+                    </div>
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+                        <a class="fb-ic">
+                            <i class="fa fa-facebook white-text mr-4"> </i>
+                        </a>
+                        <a class="tw-ic">
+                            <i class="fa fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <a class="gplus-ic">
+                            <i class="fa fa-google-plus white-text mr-4"> </i>
+                        </a>
+                        <a class="li-ic">
+                            <i class="fa fa-linkedin white-text mr-4"> </i>
+                        </a>
+                        <a class="ins-ic">
+                            <i class="fa fa-instagram white-text"> </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----------footer social---------->
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Movie.com</h6>
+                    <hr class="footer-underline mb-4 mt-0 d-inline-block mx-auto">
+                    <p>footer content</p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Links</h6>
+                    <hr class="footer-underline mb-4 mt-0 d-inline-block mx-auto">
+                    <p>
+                        <a href="#!">Home</a>
+                    </p>
+                    <p>
+                        <a href="#!">Aboutus</a>
+                    </p>
+                    <p>
+                        <a href="#!">Movies</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                    <hr class="footer-underline mb-4 mt-0 d-inline-block mx-auto">
+                    <p>
+                        <a href="#!">Home</a>
+                    </p>
+                    <p>
+                        <a href="#!">Movie</a>
+                    </p>
+                    <p>
+                        <a href="#!">Aboutus</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="footer-underline mb-4 mt-0 d-inline-block mx-auto">
+                    <p>
+                        <i class="fa fa-envelope mr-3"></i>movie@example.com</p>
+                    <p>
+                        <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <p>
+                        <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="#">movie.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.details{
+    border:2px solid #483D8B;
+    border-radius: 5px;
+    margin: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.details .btn{
+    margin: 2px;
+}
+
+.class-title{
+    background-color: #483D8B;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left:2px;
+    margin-right: 2px;
+    text-align: center;
+    color: #fff;
+}
+
+.class-year, .class-cast{
+    font-size: 13px;
+}
+.btn-rating{
+    border-radius: 50%;
+    
+}
+.class-img{
+    border:2px solid #483D8B;
+    border-radius: 5px;
+    margin-left: 3px;
+    height:200px;
+    padding-right: 0px; 
+    padding-left: 0px;
+}
