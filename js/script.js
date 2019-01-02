@@ -2,12 +2,14 @@
 //Author : Neha Verma
 //Details : Movie Details
 
-$(document).ready(function (resolve, reject) {
+$(document).ready(function () {
     var arr = [];
     $.ajax({
         type: "GET",
         url: "https://api.themoviedb.org/3/discover/movie?api_key=15d2ea6d0dc1d476efbca3eba2b9bbfb",
         success: function (data) {
+            var loader = document.getElementById("loader");
+            loader.style.display = "none";
             var count = 0;
             for (var i = 0; i < data.results.length; i++) {
                 if (count < 10) {
@@ -16,7 +18,8 @@ $(document).ready(function (resolve, reject) {
                 }
             }
         },
-        complete: function () { createhtml(arr); }
+        complete: function () { createhtml(arr); },
+        error: function () { alert("Data Cant be Load"); }
     })
 });
 
@@ -24,7 +27,7 @@ $(document).ready(function (resolve, reject) {
 function createhtml(arr) {
     // console.log(arr[0]);
     for (var i = 0; i < 10; i++) {
-        var div = parentdiv();
+        var div = parentdiv(i);
         var col1 = col1fun(arr[i].poster_path, div);
         var col2 = col2fun(div);
         var col3 = col3fun(div);
@@ -33,14 +36,16 @@ function createhtml(arr) {
         overview(arr[i].overview, col2);
         btnrating(arr[i].vote_average, col3);
         go(col3);
+        var h4=h4link(i);
+        console.log(h4);
+        sidelink(arr[i].title,i,h4);
     }
-
-
 }
 
 //Create Parent Div (Details)
-function parentdiv() {
+function parentdiv(i) {
     var div = document.createElement('div');
+    div.setAttribute('id','details-'+i);
     div.setAttribute('class', 'details row');
     $(".movie-container").append(div);
     return div;
@@ -66,7 +71,7 @@ function col2fun(div) {
 //Create column 3 in detail div
 function col3fun(div) {
     var col3 = document.createElement('div');
-    col3.setAttribute('class', 'class-col3 col-md-2');
+    col3.setAttribute('class', 'class-col3 col-md-2 col-sm-12 col-lg-2 col-12');
     div.appendChild(col3);
     return col3;
 
@@ -130,3 +135,25 @@ $(document).on("click", ".mybtn", function (e) {
     $("#modal-overview").text(overview);
     $('#myModal').modal('show');
 });
+function openNav() {
+    document.getElementById("mysidenav").style.width = "250px";
+    document.getElementById("movie-container").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mysidenav").style.width = "0";
+    document.getElementById("movie-container").style.marginLeft= "0";
+  }
+  function sidelink(title,i,h4){
+    var a = document.createElement('a');
+    a.setAttribute("href","#details-"+i);
+    a.setAttribute("class","sidelink-a");
+    a.textContent=title;
+    h4.appendChild(a);
+  }
+  function h4link(i){
+    var h4 = document.createElement('h4');
+    h4.setAttribute("class","h4link-"+i);
+    $('.sidelink').append(h4);
+    return h4;
+  }

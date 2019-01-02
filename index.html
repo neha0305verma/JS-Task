@@ -5,10 +5,12 @@
 <html>
 
 <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,6 +19,7 @@
         <!------------header----------->
         <div class="mynavbar">
             <nav class="navbar navbar-expand-md navbar-blue navbar-fixed-top">
+                <span id="sidemenu-icon" class="sidemenu-icon" onclick="openNav()">&#9776;</span>
 
                 <a class="navbar-brand" href="#">Movie.com</a>
 
@@ -73,17 +76,18 @@
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                     <!------------sidebar----------->
                     <div class="container sidebar">
-                        <div class="row">
+                        <div id="mysidenav" class="row sidenav">
                             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="well sidebar-body col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                                <a href="javascript:void(0)" id="sideclose-btn" class="sideclose-btn"
+                                                    onclick="closeNav()">&times;</a>
                                                 <img src="img/profile.png" alt="" class="img-circle" id="user-img">
-                                                <h4><a class="text-center"><strong>Link1</strong></a></h4>
-                                                <h4><a class="text-center"><small>Link2</small></a></h4>
-                                                <h4><a class="text-center"><small>Link3</small></a></h4>
-                                                <h4><a class="text-center"><small>Link4</small></a></h4>
+                                                <div class="sidelink">
+                                                    
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -92,9 +96,27 @@
                         </div>
                     </div>
                 </div>
+
                 <!------------sidebar end----------->
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                    <div class="movie-container">
+                    <div id="movie-container" class="movie-container">
+                        <!-------------loader------------>
+                        <div class="container">
+                            <div class="row">
+                                <div id="loader">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="lading"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!------------loader------------->
                         <!------------movie list----------->
 
                         <!------------movie list end----------->
